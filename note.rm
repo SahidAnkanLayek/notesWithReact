@@ -1,0 +1,30 @@
+{message && (
+          <div
+            className={`text-center ${
+              message === "User Registration Successful"
+                ? "text-green-500"
+                : "text-red-500"
+            }`}
+          >
+            {message}
+          </div>
+
+
+
+         what is the diff b/w onChange and onSubmit ???????????
+
+
+
+
+           const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData, // Spread operator to preserve existing state values
+      [event.target.name]: event.target.value, // Update only the changed field
+    });
+  };   
